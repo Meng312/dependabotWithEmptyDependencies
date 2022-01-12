@@ -1,3 +1,7 @@
+buildscript {
+    apply from: 'dependencies.gradle'
+}
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.10'
     id 'java'
@@ -12,9 +16,13 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation rootProject.ext.supportDependencies.springfox_boot_starter
+    implementation rootProject.ext.supportDependencies.hibernate_entitymanager
+    implementation rootProject.ext.supportDependencies.hibernate_core
+    implementation rootProject.ext.supportDependencies.c3p0
+    implementation rootProject.ext.supportDependencies.commons_lang3
+    testImplementation rootProject.ext.supportDependencies.junit_jupiter
+    testRuntimeOnly rootProject.ext.supportDependencies.junit_engine
 }
 
 test {
