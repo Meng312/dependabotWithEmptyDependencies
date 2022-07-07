@@ -6,7 +6,7 @@ ext {
 
     //-- DEPENDENCIES
     springFoxBootVersion = "3.0.0"
-    hibernateVersion = "5.6.2.Final"
+    hibernateVersion = "5.6.10.Final"
     c3p0Version = "0.9.5.5"
     postgresVersion = "42.3.1"
     jupiterVersion = "5.6.0"
